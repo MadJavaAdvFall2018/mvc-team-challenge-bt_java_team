@@ -29,7 +29,7 @@ public class BeanOne extends Object {
 
 
     /**
-     *  Sets the mySpecialData attribute of the BeanOne object
+     *  Sets the mySpecialData attribute of the BeanOne oject
      *
      *@param  mySpecialData  The new mySpecialData value
      */
