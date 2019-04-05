@@ -1,40 +1,197 @@
 package java112.project3;
 
 /**
- *  This is a JavaBean to demonstrate using beans with JSP.
+ * BT_JavaBean will define the model for the Beer Tap application.
  *
- *@author    eknapp
+ * @author jalexander1
+ * @version 1.0
+ * @since 04 /04/2019
  */
-public class BeanOne extends Object {
+public class BT_JavaBean extends Object {
 
-    private  String  mySpecialData;
-
+    private int tapNumber;
+    private String beerName;
+    private String beerStyle;
+    private int beerABV;
+    private int beerIBU;
+    private int beerColor;
+    private String beerDescription;
+    private boolean bottlesAvailable;
 
     /**
-     *  Constructor for the BeanOne object
+     * Zero Parameter Constructor for the BT_JavaBean object
      */
-    public BeanOne() {
-        mySpecialData  = "default value";
+    public BT_JavaBean() {
+
     }
 
-
     /**
-     *  Gets the mySpecialData attribute of the BeanOne object
+     * Instantiates a new Bt java bean.
      *
-     *@return    The mySpecialData value
+     * @param tapNumber        the tap number
+     * @param beerName         the beer name
+     * @param beerStyle        the beer style
+     * @param beerABV          the beer abv
+     * @param beerIBU          the beer ibu
+     * @param beerColor        the beer color
+     * @param beerDescription  the beer description
+     * @param bottlesAvailable the bottles available
      */
-    public String getMySpecialData() {
-        return mySpecialData;
-    }
+    public BT_JavaBean(int tapNumber, String beerName, String beerStyle, int beerABV, int beerIBU,
+                       int beerColor, String beerDescription, boolean bottlesAvailable) {
 
+        this.tapNumber = tapNumber;
+        this.beerName = beerName;
+        this.beerStyle = beerStyle;
+        this.beerABV = beerABV;
+        this.beerIBU = beerIBU;
+        this.beerColor = beerColor;
+        this.beerDescription = beerDescription;
+        this.bottlesAvailable = bottlesAvailable;
+
+    }
 
     /**
-     *  Sets the mySpecialData attribute of the BeanOne object
+     * Gets tap number.
      *
-     *@param  mySpecialData  The new mySpecialData value
+     * @return the tap number
      */
-    public void setMySpecialData(String mySpecialData) {
-        this.mySpecialData = mySpecialData;
+    public int getTapNumber() {
+        return tapNumber;
     }
 
+    /**
+     * Sets tap number.
+     *
+     * @param tapNumber the tap number
+     */
+    public void setTapNumber(int tapNumber) {
+        this.tapNumber = tapNumber;
+    }
+
+    /**
+     * Gets beer name.
+     *
+     * @return the beer name
+     */
+    public String getBeerName() {
+        return beerName;
+    }
+
+    /**
+     * Sets beer name.
+     *
+     * @param beerName the beer name
+     */
+    public void setBeerName(String beerName) {
+        this.beerName = beerName;
+    }
+
+    /**
+     * Gets beer style.
+     *
+     * @return the beer style
+     */
+    public String getBeerStyle() {
+        return beerStyle;
+    }
+
+    /**
+     * Sets beer style.
+     *
+     * @param beerStyle the beer style
+     */
+    public void setBeerStyle(String beerStyle) {
+        this.beerStyle = beerStyle;
+    }
+
+    /**
+     * Gets beer abv.
+     *
+     * @return the beer abv
+     */
+    public int getBeerABV() {
+        return beerABV;
+    }
+
+    /**
+     * Sets beer abv.
+     *
+     * @param beerABV the beer abv
+     */
+    public void setBeerABV(int beerABV) {
+        this.beerABV = beerABV;
+    }
+
+    /**
+     * Gets beer ibu.
+     *
+     * @return the beer ibu
+     */
+    public int getBeerIBU() {
+        return beerIBU;
+    }
+
+    /**
+     * Sets beer ibu.
+     *
+     * @param beerIBU the beer ibu
+     */
+    public void setBeerIBU(int beerIBU) {
+        this.beerIBU = beerIBU;
+    }
+
+    /**
+     * Gets beer color.
+     *
+     * @return the beer color
+     */
+    public int getBeerColor() {
+        return beerColor;
+    }
+
+    /**
+     * Sets beer color.
+     *
+     * @param beerColor the beer color
+     */
+    public void setBeerColor(int beerColor) {
+        this.beerColor = beerColor;
+    }
+
+    /**
+     * Gets beer description.
+     *
+     * @return the beer description
+     */
+    public String getBeerDescription() {
+        return beerDescription;
+    }
+
+    /**
+     * Sets beer description.
+     *
+     * @param beerDescription the beer description
+     */
+    public void setBeerDescription(String beerDescription) {
+        this.beerDescription = beerDescription;
+    }
+
+    /**
+     * Is bottles available boolean.
+     *
+     * @return the boolean
+     */
+    public boolean isBottlesAvailable() {
+        return bottlesAvailable;
+    }
+
+    /**
+     * Sets bottles available.
+     *
+     * @param bottlesAvailable the bottles available
+     */
+    public void setBottlesAvailable(boolean bottlesAvailable) {
+        this.bottlesAvailable = bottlesAvailable;
+    }
 }
