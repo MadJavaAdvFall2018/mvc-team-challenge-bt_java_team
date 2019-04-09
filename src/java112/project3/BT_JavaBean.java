@@ -12,9 +12,9 @@ public class BT_JavaBean extends Object {
     private int tapNumber;
     private String beerName;
     private String beerStyle;
-    private int beerABV;
-    private int beerIBU;
-    private int beerColor;
+    private double beerABV;
+    private double beerIBU;
+    private double beerColor;
     private String beerDescription;
     private boolean bottlesAvailable;
 
@@ -37,8 +37,8 @@ public class BT_JavaBean extends Object {
      * @param beerDescription  the beer description
      * @param bottlesAvailable the bottles available
      */
-    public BT_JavaBean(int tapNumber, String beerName, String beerStyle, int beerABV, int beerIBU,
-                       int beerColor, String beerDescription, boolean bottlesAvailable) {
+    public BT_JavaBean(int tapNumber, String beerName, String beerStyle, double beerABV, double beerIBU,
+                       double beerColor, String beerDescription, boolean bottlesAvailable) {
 
         this.tapNumber = tapNumber;
         this.beerName = beerName;
@@ -110,7 +110,7 @@ public class BT_JavaBean extends Object {
      *
      * @return the beer abv
      */
-    public int getBeerABV() {
+    public double getBeerABV() {
         return beerABV;
     }
 
@@ -119,7 +119,7 @@ public class BT_JavaBean extends Object {
      *
      * @param beerABV the beer abv
      */
-    public void setBeerABV(int beerABV) {
+    public void setBeerABV(double beerABV) {
         this.beerABV = beerABV;
     }
 
@@ -128,7 +128,7 @@ public class BT_JavaBean extends Object {
      *
      * @return the beer ibu
      */
-    public int getBeerIBU() {
+    public double getBeerIBU() {
         return beerIBU;
     }
 
@@ -137,7 +137,7 @@ public class BT_JavaBean extends Object {
      *
      * @param beerIBU the beer ibu
      */
-    public void setBeerIBU(int beerIBU) {
+    public void setBeerIBU(double beerIBU) {
         this.beerIBU = beerIBU;
     }
 
@@ -146,7 +146,7 @@ public class BT_JavaBean extends Object {
      *
      * @return the beer color
      */
-    public int getBeerColor() {
+    public double getBeerColor() {
         return beerColor;
     }
 
@@ -155,7 +155,7 @@ public class BT_JavaBean extends Object {
      *
      * @param beerColor the beer color
      */
-    public void setBeerColor(int beerColor) {
+    public void setBeerColor(double beerColor) {
         this.beerColor = beerColor;
     }
 
