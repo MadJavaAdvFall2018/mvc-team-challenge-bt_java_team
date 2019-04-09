@@ -1,0 +1,15 @@
+1> Added BT_Home.jsp => public_html diretory
+2> Added BT_Response.jsp => public_html diretory
+3> Added CSS folder----> contains stylesheet ==> public_html diretory
+4> chnged web.xml
+
+<welcome-file-list>
+  <welcome-file>/BT_Home.jsp</welcome-file>
+</welcome-file-list>
+
+5>URL : http://localhost:8080/java112/
+
+Note:-
+===========================
+6> Changed BT_JavaBean =>JavaBean class should implements Serializable interface,
+this allows to save store javaBean class state.
