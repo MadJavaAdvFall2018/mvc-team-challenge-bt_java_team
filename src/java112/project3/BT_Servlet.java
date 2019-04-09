@@ -45,46 +45,46 @@ public class BT_Servlet extends HttpServlet {
     }
 
     /**
-    *
-    * The createTapList method will create a list of TapList beans, instantiate several
-    * new tap list items and add them to the list. It will then set the list to the request.
-    *
-    * @param request the request
-    * @return the request data
-    */
+     * The createTapList method will create a list of TapList beans, instantiate several
+     * new tap list items and add them to the list. It will then set the list to the request.
+     *
+     * @param request the request
+     * @return the request data
+     */
     public HttpServletRequest createTapList(HttpServletRequest request) {
 
+        // Create a list of tap items
         List<BT_JavaBean> tapList = new ArrayList<BT_JavaBean>();
 
+        // Create and add several new taps
         BT_JavaBean tapOne = new BT_JavaBean(1, "Tankard O' Ale", "Stout", 7.5, 33.4, 32,
-               "A hearty blend of roasts with a caramel flavor", true);
-       tapList.add(tapOne);
+                "A hearty blend of roasts with a caramel flavor", true);
+        tapList.add(tapOne);
 
-       BT_JavaBean tapTwo = new BT_JavaBean(2, "Dark Vader",
-               "Dark IPA", 9.2, 59.5, 36,
-               "Dark Ale with a robust flavor mix", false);
-       tapList.add(tapTwo);
+        BT_JavaBean tapTwo = new BT_JavaBean(2, "Dark Vader",
+                "Dark IPA", 9.2, 59.5, 36,
+                "Dark Ale with a robust flavor mix", false);
+        tapList.add(tapTwo);
 
-       BT_JavaBean tapThree = new BT_JavaBean(3, "Caribou Slobber",
-               "American Brown Ale", 5.9, 15.5, 19,
-               "Clone of Moose Drool", false);
-       tapList.add(tapThree);
+        BT_JavaBean tapThree = new BT_JavaBean(3, "Caribou Slobber",
+                "American Brown Ale", 5.9, 15.5, 19,
+                "Clone of Moose Drool", false);
+        tapList.add(tapThree);
 
-       BT_JavaBean tapFour = new BT_JavaBean(4, "Top O' Da Mornin Vanilla Stout",
-               "Stout", 6.2, 23.5, 28,
-               "Classic Irish Stout with vanilla flavor", true);
-       tapList.add(tapFour);
+        BT_JavaBean tapFour = new BT_JavaBean(4, "Top O' Da Mornin Vanilla Stout",
+                "Stout", 6.2, 23.5, 28,
+                "Classic Irish Stout with vanilla flavor", true);
+        tapList.add(tapFour);
 
-       BT_JavaBean tapFive = new BT_JavaBean(5, "Holiday Ale",
-               "American Specialty", 5.2, 14, 12,
-               "Clone of Great Lakes Christmas Ale", false);
-       tapList.add(tapFive);
+        BT_JavaBean tapFive = new BT_JavaBean(5, "Holiday Ale",
+                "American Specialty", 5.2, 14, 12,
+                "Clone of Great Lakes Christmas Ale", false);
+        tapList.add(tapFive);
 
-       BT_JavaBean tapSix = new BT_JavaBean(6, "Lando's Cherries on a Cloud",
-               "American Pale Ale", 4.9, 9.1, 6,
-               "Ale with a strawberry flavor", true);
-       tapList.add(tapSix);
-
+        BT_JavaBean tapSix = new BT_JavaBean(6, "Lando's Cherries on a Cloud",
+                "American Pale Ale", 4.9, 9.1, 6,
+                "Ale with a strawberry flavor", true);
+        tapList.add(tapSix);
 
         // Set the bean to the request
         request.setAttribute("requestData", tapList);
