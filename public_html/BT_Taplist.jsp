@@ -1,5 +1,7 @@
 <%@ page import="java112.project3.BT_JavaBean" %>
 <%@ page import="java.util.List"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -36,29 +38,30 @@
 		<div id="appContent">
 			<table id = 'tableId' style = 'color: black; font-size: 1.2em'>
 				<tr>
-					<td>Tap Number</td>
-					<td>Beer Name</td>
-					<td>Beer Style</td>
-					<td>Beer ABV</td>
-					<td>Beer IBU</td>
-					<td>Beer Color</td>
-					<td>Beer Description</td>
-					<td>Bottles Available</td>
-					<td>${requestData[3].beerName}</td>
-					<td>${requestData.size()}</td>
+					<th>Tap Number</th>
+					<th>Beer Name</th>
+					<th>Beer Style</th>
+					<th>Beer ABV</th>
+					<th>Beer IBU</th>
+					<th>Beer Color</th>
+					<th>Beer Description</th>
+					<th>Bottles Available</th>
 				</tr>
-				<% for(int i = 0; i < ${requestData.size()}; i+=1) { %>
-				      <tr>
-								<td>${requestData[i].tapNumber}</td>
-				        <td>${requestData[i].beerName}</td>
-				        <td>${requestData[i].beerStyle}</td>
-				        <td>${requestData[i].beerABV}</td>
-				        <td>${requestData[i].beerIBU}</td>
-								<td>${requestData[i].beerColor}</td>
-								<td>${requestData[i].beerDescription}</td>
-								<td>${requestData[i].bottlesAvailable}</td>
-				        </tr>
-        <% } %>
+
+					<%= request.getAttribute("requestData ")%>
+					<c:forEach items="${requestData}" var="tapList">
+						<tr>
+							<td>${tapList.tapNumber}</td>
+							<td>${tapList.beerName}</td>
+							<td>${tapList.beerStyle}</td>
+							<td>${tapList.beerABV}</td>
+							<td>${tapList.beerIBU}</td>
+							<td>${tapList.beerColor}</td>
+							<td>${tapList.beerDescription}</td>
+							<td>${tapList.bottlesAvailable}</td>
+						</tr>
+					</c:forEach>
+				</tr>
 
 			</table>
 		</div>
