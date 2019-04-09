@@ -48,7 +48,6 @@
 					<th>Bottles Available</th>
 				</tr>
 
-					<%= request.getAttribute("requestData ")%>
 					<c:forEach items="${requestData}" var="tapList">
 						<tr>
 							<td>${tapList.tapNumber}</td>
@@ -61,6 +60,7 @@
 							<td>${tapList.bottlesAvailable}</td>
 						</tr>
 					</c:forEach>
+
 				</tr>
 
 			</table>
