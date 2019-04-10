@@ -44,21 +44,21 @@
 					<td>Beer Color</td>
 					<td>Beer Description</td>
 					<td>Bottles Available</td>
-					<td>${requestData[3].beerName}</td>
-					<td>${requestData.size()}</td>
 				</tr>
-				<% for(int i = 0; i < ${requestData.size()}; i+=1) { %>
-				      <tr>
-								<td>${requestData[i].tapNumber}</td>
-				        <td>${requestData[i].beerName}</td>
-				        <td>${requestData[i].beerStyle}</td>
-				        <td>${requestData[i].beerABV}</td>
-				        <td>${requestData[i].beerIBU}</td>
-								<td>${requestData[i].beerColor}</td>
-								<td>${requestData[i].beerDescription}</td>
-								<td>${requestData[i].bottlesAvailable}</td>
-				        </tr>
-        <% } %>
+
+				<c:forEach items="${requestData}" var="tappList">
+				  <tr>
+				    <td>${tappList.getTapNumber()}</td>
+				    <td>${tappList.beerName}</td>
+				    <td>${tappList.beerStyle}</td>
+				    <td>${tappList.beerABV}</td>
+				    <td>${tappList.beerIBU}</td>
+				    <td>${tappList.beerColor}</td>
+				    <td>${tappList.beerDescription}</td>
+				    <td>${tappList.bottlesAvailable}</td>
+				  </tr>
+				</c:forEach>
+
 
 			</table>
 		</div>
