@@ -23,7 +23,6 @@ li { color: #036DA7; list-style-type: none; margin-bottom: 6px; }
 .post-span {color:#ccc; font-size:12px;}
 .post-img{margin-top:10px;}
 #tableId {
-  margin-left: 100px;
   margin-top: 20px;
 }
 table {
@@ -54,5 +53,17 @@ a:hover{
   font-size: 30;
 }
 #goBtn {
-  margin-left: 250px;
+  margin:10px;
+  padding: 10px;
+}
+#homeDivAlignContent {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 50px;
+}
+#setNoBorder {
+  padding: 5px;
+  border-color: white;
+  margin: 25px;
+  margin-left: 25px;
 }

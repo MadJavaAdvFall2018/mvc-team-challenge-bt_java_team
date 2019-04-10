@@ -1,5 +1,7 @@
 <%@ page import="java112.project3.BT_JavaBean" %>
 <%@ page import="java.util.List"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -17,6 +19,11 @@
 	</div>
 
 	<div id="sidebar">
+		<h3 style="color:blue;">
+			<button>
+			<a href = "/java112">HomePage</a>
+		</button>
+		</h3><br/><br/>
 		<h2>MVC Project #Technology</h2>
 		<div class="box">
 		<ul>
@@ -36,30 +43,30 @@
 		<div id="appContent">
 			<table id = 'tableId' style = 'color: black; font-size: 1.2em'>
 				<tr>
-					<td>Tap Number</td>
-					<td>Beer Name</td>
-					<td>Beer Style</td>
-					<td>Beer ABV</td>
-					<td>Beer IBU</td>
-					<td>Beer Color</td>
-					<td>Beer Description</td>
-					<td>Bottles Available</td>
+					<th>Tap Number</th>
+					<th>Beer Name</th>
+					<th>Beer Style</th>
+					<th>Beer ABV</th>
+					<th>Beer IBU</th>
+					<th>Beer Color</th>
+					<th>Beer Description</th>
+					<th>Bottles Available</th>
 				</tr>
 
-				<c:forEach items="${requestData}" var="tappList">
-				  <tr>
-				    <td>${tappList.getTapNumber()}</td>
-				    <td>${tappList.beerName}</td>
-				    <td>${tappList.beerStyle}</td>
-				    <td>${tappList.beerABV}</td>
-				    <td>${tappList.beerIBU}</td>
-				    <td>${tappList.beerColor}</td>
-				    <td>${tappList.beerDescription}</td>
-				    <td>${tappList.bottlesAvailable}</td>
-				  </tr>
-				</c:forEach>
+					<c:forEach items="${requestData}" var="tapList">
+						<tr>
+							<td>${tapList.tapNumber}</td>
+							<td>${tapList.beerName}</td>
+							<td>${tapList.beerStyle}</td>
+							<td>${tapList.beerABV}</td>
+							<td>${tapList.beerIBU}</td>
+							<td>${tapList.beerColor}</td>
+							<td>${tapList.beerDescription}</td>
+							<td>${tapList.bottlesAvailable}</td>
+						</tr>
+					</c:forEach>
 
-
+				</tr>
 			</table>
 		</div>
 	</div>

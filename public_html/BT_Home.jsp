@@ -33,11 +33,24 @@
 			class="img-circle"/>
 		</div>
 		<div id="appContent">
-			<button id="goBtn">
-			<a href="<%=request.getContextPath()%>/beer-tap?">
-			Display Beer Data</a>
-		</button>
-
+			<div id="homeDivAlignContent">
+				<table id="setNoBorder">
+					<tr>
+						<th>
+							<button id="goBtn">
+							<a href="<%=request.getContextPath()%>/beer-tap?">
+							GO TO BT_APP</a>
+						 </button>
+					 </th>
+						<th>
+							<button id="goBtn">
+			 			   <a href="bt_MVC_Architecture.html">
+			 			   Display BT_App Architecture</a>
+			 		  </button>
+					</th>
+					</tr>
+				</table>
+			</div>
 		</div>
 
 	</div>
